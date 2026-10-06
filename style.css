@@ -23,3 +23,4 @@ code{font-family:"IBM Plex Mono",monospace;font-size:.85em;background:var(--code
 pre{background:var(--code);padding:16px;border-radius:6px;overflow-x:auto}
 pre code{background:none;padding:0}
 footer{padding-top:48px;padding-bottom:48px}
+ul.posts li .views{margin-left:auto;flex:none;white-space:nowrap}
