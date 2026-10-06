@@ -13,4 +13,4 @@ Markdown here.
 
 Push to `main` and GitHub Actions builds and deploys it. Add `draft: true` to hide a post.
 
-Local preview: `pip install markdown && python build.py && python -m http.server -d _site`
+Local (Nix): `make preview` builds, serves on :8000 and opens the browser. `nix develop` for a shell, `nix build` for the site in `./result`.
