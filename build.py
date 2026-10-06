@@ -6,7 +6,7 @@ ROOT = pathlib.Path(__file__).parent
 OUT = ROOT / "_site"
 BASE = (ROOT / "templates/base.html").read_text()
 # GoatCounter site code (https://<code>.goatcounter.com). Empty disables view counts.
-GOATCOUNTER = ""
+GOATCOUNTER = "bombar"
 ANALYTICS = (
     f'<script data-goatcounter="https://{GOATCOUNTER}.goatcounter.com/count" '
     'async src="//gc.zgo.at/count.js"></script>'
