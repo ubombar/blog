@@ -1,4 +1,4 @@
-"""Build the site: posts/*.md -> _site/posts/*.html, plus index.html."""
+"""Build posts and copy standalone apps into the deployable site."""
 import html, pathlib, shutil
 import markdown
 
@@ -35,6 +35,8 @@ shutil.rmtree(OUT, ignore_errors=True)
 (OUT / "posts").mkdir(parents=True)
 for f in ["style.css", "views.js", "CNAME"]:
     shutil.copy(ROOT / f, OUT / f)
+if (ROOT / "apps").is_dir():
+    shutil.copytree(ROOT / "apps", OUT / "apps")
 
 posts = []
 for md in (ROOT / "posts").glob("*.md"):
